@@ -1,13 +1,12 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
+import Home from './pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import BackgroundBlur from './components/UI/BackgroundBlur/Backgroundblur';
 import Card from './components/Card/Card.js';
-import Grid from './components/Grid/Grid';
-
+import TypeOfCocktales from './pages/TypeOfCocktales';
 import { useSelector } from 'react-redux';
+import Auth from './pages/Auth';
+import CardOpened from './pages/CardOpened';
 
 function App() {
   const coctails = useSelector((state) => state.coctails);
@@ -15,7 +14,6 @@ function App() {
 
   const [date, setDate] = useState();
   const [dateUpdate, setDateUpdate] = useState(false);
-  const [popupSwitch, setPopupSwitch] = useState(false);
 
   useEffect(() => {
     fetch('http://worldtimeapi.org/api/timezone/Europe/Moscow')
@@ -30,8 +28,6 @@ function App() {
 
   let currentDate = new Date(date);
   const month = currentDate.getMonth() + 1;
-
-  console.log(coctails)
 
   const summerArr = coctails.filter((item) => item.season === 'summer');
   const fallArr = coctails.filter((item) => item.season === 'fall');
@@ -49,36 +45,18 @@ function App() {
       ? springArr
       : '';
 
+
+
   return (
     <BrowserRouter>
       <div className="app">
-        <BackgroundBlur />
-        <Header callBack={setDateUpdate} />
         <Routes>
-          {
-            <>
-              <Route path="/" element={<Home arr={coctailsOfSeason} />} />
-              <Route path="/strong-alcohol" element={<Grid />} />
-              <Route path="/low-alcohol" element={<Grid />} />
-              <Route path="/non-alcoholic" element={<Grid />} />
-              <Route
-                path="/:category/:id"
-                element={coctails.map((item) => {
-                  if (isCardOpen === item.id) {
-                    return (
-                      <Card
-                        name={item.name}
-                        ing={item.ingredients}
-                        desc={item.description}
-                        src={item.src_sqv}
-                        seasos={item.season}
-                      ></Card>
-                    );
-                  }
-                })}
-              ></Route>
-            </>
-          }
+          <Route path="/" element={<Home arr={coctailsOfSeason} />} />
+          <Route path="strong-alcohol" element={<TypeOfCocktales />} />
+          <Route path="low-alcohol" element={<TypeOfCocktales />} />
+          <Route path="non-alcoholic" element={<TypeOfCocktales />} />
+          <Route path=":category/:id" element={<CardOpened />} />
+          <Route path="auth/*" element={<Auth />}/>
         </Routes>
       </div>
     </BrowserRouter>

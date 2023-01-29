@@ -4,12 +4,15 @@
   background-color: #8064917f;
   padding: 30px 0 30px 0;
   border-radius: 15px;
+  z-index: 1;
 }
 
 .facts__header {
-  max-width: 1000px;
+  max-width: 94%;
+  min-height: 140px;
   margin: 0 auto;
-  font-family: 'volkhovregular';
-  color: #fff;
-  font-size: 22px;
+  font-family: 'Lora';
+  color: rgb(205, 205, 205);
+  font-size: 18px;
+  line-height: 32px;
 }

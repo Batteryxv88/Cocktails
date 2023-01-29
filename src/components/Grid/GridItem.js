@@ -18,7 +18,7 @@ const GridItem = (props) => {
   };
 
   return (
-    <Link key={props.name} to={`/${props.class}/${props.name}`}>
+    <Link className='grid__link' key={props.name} to={`/${props.class}/${props.name}`}>
       <button className="grid__container" id={props.id} onClick={handleToggle}>
         <img
           src={props.img}

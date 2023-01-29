@@ -3,8 +3,28 @@
   max-width: 1440px;
   height: 600px;
   position: relative;
-  box-shadow: 1px 60px 100px #011324;
-  //border: 1px solid #02315E;
+  /* box-shadow: 1px 60px 100px #011324; */
+  /* box-shadow: 1px 1px 50px #120b1cd3,
+  1px 1px 100px #120b1cd3,
+  1px 1px 100px #120b1cd3,
+  -100px 2px 80px #3556cf92,
+  100px 50px 80px #3556cf92,
+  -1px 100px 80px #3556cf92,
+  -150px 100px 80px #3556cf92,
+  80px 150px 80px #3556cf92,
+  120px 150px 80px #3556cf92,
+  150px 100px 80px #3556cf92,
+  2px 2px 30px #872fd892,
+  -50px 2px 80px #803ce592,
+  50px 50px 80px #803ce592; */
+  /* box-shadow: 150px 1px 150px #3556cf92,
+  -150px 1px 150px #3556cf92,
+  80px 1px 100px #7535cf92,
+  -80px 1px 100px #7535cf92,
+  10px 20px 100px #011324,
+  -10px 20px 100px #011324,
+  1px 60px 100px #011324; */
+  z-index: -1;
 }
 
 .slider__window {
@@ -22,6 +42,7 @@
   transition: ease-in-out 0.6s;
   display: flex;
   flex-direction: column;
+  justify-content: end;
   align-items: flex-start;
 }
 
@@ -61,11 +82,10 @@
 }
 
 .slider__name {
-  color: #fff;
-  font-size: 42px;
-  margin: 55px 0 0 80px;
-  font-family: 'volkhovregular';
-  text-shadow: #000 5px 0 10px;
+  font-size: 40px;
+  padding:  5px 180px 5px 50px;
+  font-family: 'PF Scandal Pro';
+  color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 1024px) {
