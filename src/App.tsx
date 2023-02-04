@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Home from './pages/Home';
+import TypeOfCocktales from './pages/TypeOfCocktales';
+import CardOpened from './pages/CardOpened';
+import Auth from './pages/Auth';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="strong-alcohol" element={<TypeOfCocktales />} />
+          <Route path="low-alcohol" element={<TypeOfCocktales />} />
+          <Route path="non-alcoholic" element={<TypeOfCocktales />} />
+          <Route path=":category/:id" element={<CardOpened />} />
+          <Route path="auth/*" element={<Auth />}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
