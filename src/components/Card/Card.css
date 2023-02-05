@@ -1,0 +1,119 @@
+.card {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  border-top: 3px solid #806491;
+  padding: 150px 0 0 0;
+}
+
+
+
+.wrap {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__title {
+  /* color: rgb(205, 205, 205); */
+  color: #fff;
+  margin: 20px auto 5px;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.card__img {
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-height: 600px;
+  border-top: 2px solid gray;
+}
+
+.card__panel {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+
+.card__like_img {
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  z-index: 1;
+  content: url(../UI/Images/gray.png);
+  margin: 0;
+}
+
+.card__like_img:hover {
+  content: url(../UI/Images/heart_active.png);
+}
+
+.card__description {
+  width: 90%;
+  height: 200px;
+  color: rgb(145, 145, 145);
+  font-size: 22px;
+  text-align: end;
+  margin: 60px auto 0 auto;
+  border-bottom: 2px solid gray;
+  
+}
+
+.card__ing {
+  color: rgb(145, 145, 145);
+  margin: 5px 0 0 10px;
+  text-align: start;
+}
+
+.card__descr-wrapper {
+  font-size: 20px;
+  margin: 50px 0 0 0;
+}
+
+
+
+.card__descr-wrapper_ingridient {
+  color: rgb(145, 145, 145);
+  text-align: start;
+  margin: 0;
+}
+
+.ingredient-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.panel-new {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+

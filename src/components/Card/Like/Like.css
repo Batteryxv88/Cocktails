@@ -1,0 +1,22 @@
+.like {
+  margin-top: 10px;
+}
+
+.like__label {
+  color: #fff;
+}
+
+.like__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.like__img {
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  content: url(../../UI/Images/gray.png);
+  margin: 0;
+}
