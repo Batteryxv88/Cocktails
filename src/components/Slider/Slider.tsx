@@ -1,12 +1,8 @@
 import './Slider.css';
 import { useRef, useEffect, useState } from 'react';
 import SliderItems from './SliderItems';
-import { CocktalesArr } from '../../state/cocktailsArr';
 import { useAppSelector } from '../../state/reduxHooks';
 
-interface SliderProps {
-  arr: CocktalesArr[] | null
-}
 
 const Slider = () => {
   const cocktails = useAppSelector((state) => state.cocktails);
