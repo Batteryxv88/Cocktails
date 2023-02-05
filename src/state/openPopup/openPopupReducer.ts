@@ -1,5 +1,4 @@
 import { TOGGLE_POPUP, TOGGLE_FORM } from './openPopupConst';
-import { PayloadAction } from '@reduxjs/toolkit';
 import { RootActionsType } from '../rootActionsTypes';
 const defaultState = {
   isPopupOpen: false,

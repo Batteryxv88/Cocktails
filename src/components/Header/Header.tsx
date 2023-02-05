@@ -5,7 +5,12 @@ import { useAppDispatch, useAppSelector } from '../../state/reduxHooks';
 import { popupToggle } from '../../state/openPopup/openPopupActions';
 import '../../fonts/stylesheet.css';
 
-import { setHome, setStrAlk, setLowAlk, setNonAlk } from '../../state/cocktales/cocktailsActions';
+import {
+  setHome,
+  setStrAlk,
+  setLowAlk,
+  setNonAlk,
+} from '../../state/cocktales/cocktailsActions';
 
 const Header = () => {
   const [dateUpdate, setDateUpdate] = useState(true);
@@ -55,16 +60,12 @@ const Header = () => {
           <button className={styles.button}>Поиск</button>
         </form>
         <div className={styles.entry}>
-          {!isPopupOpen && (
-            <Link
-              to="auth"
-              className={styles.link}
-              onClick={() => dispatch(popupToggle)}
-            >
+          {!isPopupOpen && 
+            <button className={styles.link} onClick={() => dispatch(popupToggle)}>
               Войти
-            </Link>
-          )}
-          {isPopupOpen && <button className={styles.button}>Sign out</button>}
+            </button>
+          }
+          {isPopupOpen && <button className={styles.button}>Выйти</button>}
         </div>
       </div>
     </div>

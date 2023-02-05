@@ -5,7 +5,7 @@
   z-index: 2;
   backdrop-filter: blur(8px);
   display: block;
-  background-image: url(../../UI/Images/fon9.jpg);
+  //background-image: url(../../UI/Images/fon9.jpg);
   background-size: initial;
   backdrop-filter: blur(80px);
   background-position: top;
@@ -96,6 +96,7 @@
   color: #fff;
   border-radius: 10px;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .button_close {

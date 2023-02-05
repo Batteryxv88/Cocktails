@@ -4,14 +4,17 @@ import LoginForm from './Forms/LoginForm';
 import RegistrationForm from './Forms/RegistrationForm';
 
 const Popup = () => {
+  const isPopupOpen = useAppSelector((store) => store.openPopup.isPopupOpen);
+
   const isLoginFormOpen = useAppSelector(
     (store) => store.openPopup.isLoginFormOpen
   );
 
   return (
-    <div className={styles.popup}>
-      {isLoginFormOpen && <LoginForm />}
-      {!isLoginFormOpen && <RegistrationForm />}
+    <div className={isPopupOpen === true ?  styles.back_blur: styles.active}>
+      <div >
+        {isLoginFormOpen ? <LoginForm /> : <RegistrationForm />}
+      </div>
     </div>
   );
 };
