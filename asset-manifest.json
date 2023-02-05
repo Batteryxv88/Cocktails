@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Cocktailes/static/css/main.8d07a422.css",
-    "main.js": "/Cocktailes/static/js/main.59422094.js",
+    "main.css": "/Cocktailes/static/css/main.a0a46a3b.css",
+    "main.js": "/Cocktailes/static/js/main.c9a49fb4.js",
     "static/js/787.6008b711.chunk.js": "/Cocktailes/static/js/787.6008b711.chunk.js",
     "static/media/fon9.jpg": "/Cocktailes/static/media/fon9.deb88eedc9877a9e3646.jpg",
     "static/media/ComforterBrush-Regular.woff": "/Cocktailes/static/media/ComforterBrush-Regular.574113b2fe81daad61ca.woff",
@@ -25,12 +25,12 @@
     "static/media/arrow2.png": "/Cocktailes/static/media/arrow2.9edfd30de83ab8492410.png",
     "index.html": "/Cocktailes/index.html",
     "static/media/close.svg": "/Cocktailes/static/media/close.039f1f5203f653b4bacd.svg",
-    "main.8d07a422.css.map": "/Cocktailes/static/css/main.8d07a422.css.map",
-    "main.59422094.js.map": "/Cocktailes/static/js/main.59422094.js.map",
+    "main.a0a46a3b.css.map": "/Cocktailes/static/css/main.a0a46a3b.css.map",
+    "main.c9a49fb4.js.map": "/Cocktailes/static/js/main.c9a49fb4.js.map",
     "787.6008b711.chunk.js.map": "/Cocktailes/static/js/787.6008b711.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d07a422.css",
-    "static/js/main.59422094.js"
+    "static/css/main.a0a46a3b.css",
+    "static/js/main.c9a49fb4.js"
   ]
 }
