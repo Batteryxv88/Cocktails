@@ -1,12 +1,18 @@
-import { TOGGLE_POPUP, TOGGLE_FORM } from './openPopupConst';
-import { PayloadAction } from '@reduxjs/toolkit';
+import { TOGGLE_POPUP, TOGGLE_FORM, POPUP_CLOSED } from './openPopupConst';
 import { RootActionsType } from '../rootActionsTypes';
+import { type } from 'os';
+
+type DefaultState = {
+  isPopupOpen: null | boolean,
+  isLoginFormOpen: null | boolean,
+}
+
 const defaultState = {
   isPopupOpen: false,
-  isLoginFormOpen: true,
+  isLoginFormOpen: null,
 };
 
-export const openPopup = (state = defaultState, action: RootActionsType) => {
+export const openPopup = (state: DefaultState = defaultState, action: RootActionsType) => {
   switch (action.type) {
     case TOGGLE_POPUP: {
       return state = {
@@ -20,6 +26,12 @@ export const openPopup = (state = defaultState, action: RootActionsType) => {
             isLoginFormOpen: false,
           };
     }
+    case POPUP_CLOSED: {
+      return state = {
+        isPopupOpen: false,
+        isLoginFormOpen: null,
+        };
+  }
     default: {
       return defaultState;
     }

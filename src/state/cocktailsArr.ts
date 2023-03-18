@@ -4,15 +4,24 @@ export type Ing = {
   measure: string;
 };
 
+export type CommentType = {
+  id: number;
+  author: string;
+  date: Date;
+  comment: string;
+  icon: string;
+};
+
 export type CocktalesArr = {
-  name: string,
-  id: string,
-  season: string,
-  src: string,
-  src_sqv: string,
-  class: string,
-  description: string,
-  ingredients: Ing[],
+  name: string;
+  id: string;
+  season: string;
+  src: string;
+  src_sqv: string;
+  class: string;
+  description: string;
+  ingredients: Ing[];
+  comment: CommentType[]
 };
 
 const coctailsArr: CocktalesArr[] = [
@@ -52,6 +61,22 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'мл',
       },
     ],
+    comment: [
+      {
+      id: 1,
+      author: 'Дарина',
+      date: new Date(),
+      comment: 'Хороший коктейльчик',
+      icon: 'https://i.ibb.co/M5zKzfv/user.png',
+    },
+    {
+      id: 2,
+      author: 'Максим',
+      date: new Date(),
+      comment: "Слишком сладкий, но вобщем ничего.",
+      icon: "https://i.ibb.co/M5zKzfv/user.png"
+  }
+],
   },
 
   {
@@ -110,6 +135,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'г',
       },
     ],
+    comment: []
   },
 
   {
@@ -138,6 +164,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'мл',
       },
     ],
+    comment: []
   },
 
   {
@@ -171,6 +198,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'мл',
       },
     ],
+    comment: []
   },
 
   {
@@ -219,6 +247,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'по вкусу',
       },
     ],
+    comment: []
   },
 
   {
@@ -247,6 +276,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'полный бокал',
       },
     ],
+    comment: []
   },
 
   {
@@ -300,6 +330,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'по вкусу',
       },
     ],
+    comment: []
   },
 
   {
@@ -338,6 +369,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'гр',
       },
     ],
+    comment: []
   },
 
   {
@@ -381,6 +413,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'шт',
       },
     ],
+    comment: []
   },
 
   {
@@ -414,6 +447,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'по вкусу',
       },
     ],
+    comment: []
   },
 
   {
@@ -482,6 +516,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'мл',
       },
     ],
+    comment: []
   },
 
   {
@@ -520,6 +555,7 @@ const coctailsArr: CocktalesArr[] = [
         measure: 'шт',
       },
     ],
+    comment: []
   },
 ];
 
