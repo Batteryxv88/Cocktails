@@ -1,6 +1,6 @@
 import { passwordCheck, emailCheck } from './formConsts';
 import { useAppDispatch, useAppSelector } from '../../../state/reduxHooks';
-import { popupToggle, formToggle } from '../../../state/openPopup/openPopupActions';
+import { popupToggle, formToggle, popupClosed } from '../../../state/openPopup/openPopupActions';
 import { useForm } from 'react-hook-form';
 import styles from './form.module.css';
 import { Link } from 'react-router-dom';
@@ -27,13 +27,14 @@ const LoginForm = () => {
 
   const popupCloseHandler = () => {
     dispatch(popupToggle);
+    dispatch(popupClosed);
     reset();
   };
 
   const isPopupOpen = useAppSelector((store) => store.openPopup.isPopupOpen);
 
   return (
-    <div className={isPopupOpen === true ?  styles.back_blur: styles.active}>
+    <div className={isPopupOpen === true ?  styles.blur: styles.active}>
       <div className={styles.blur}>
         <div className={styles.form}>
           <div className={styles.title_wrapper}>

@@ -17,7 +17,7 @@
   
   .nav_title {
     margin-right: 30px;
-    font-size: 24px;
+    font-size: 18px;
     text-decoration: none;
     text-shadow: 1px 1px 50px #5102c792,
     -2px 2px 30px #3556cf92,
@@ -26,6 +26,7 @@
     2px 10px 30px #872fd892;
     color: rgb(225, 225, 225);
     transition: 0.3s ease-out;
+    text-transform: uppercase;
   }
   
   @keyframes flicker {
@@ -92,13 +93,14 @@
     align-items: center;
     border: none;
     background-color: #1d45c792;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 5px;
     height: 34px;
     width: 70px;
     color: rgb(204, 204, 204);
     transition: 0.3s ease-out;
     cursor: pointer;
+    text-transform: uppercase;
   }
 
   .button:hover {
@@ -119,11 +121,12 @@
     color: rgb(204, 204, 204);
     text-decoration: none;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 32px;
     border-radius: 5px;
     transition: 0.3s ease-out;
     cursor: pointer;
+    text-transform: uppercase;
   }
 
   .link:hover {

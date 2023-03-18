@@ -1,21 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
+import styles from './app.module.css'
 import Home from './pages/Home';
 import TypeOfCocktales from './pages/TypeOfCocktales';
 import CardOpened from './pages/CardOpened';
-import Auth from './pages/Auth';
-import { useAppSelector } from './state/reduxHooks';
-import LoginForm from './components/Popup/Forms/LoginForm';
 import Popup from './components/Popup/Popup';
+import { useAppSelector } from './state/reduxHooks';
 
 
 function App() {
   const isPopupOpen = useAppSelector((store) => store.openPopup.isPopupOpen);
 
+  
   return (
-    <BrowserRouter>
-      <div className="app">
-        <Popup />
+    <BrowserRouter basename='/Cocktailes'>
+      <div className={styles.app}>
+      <Popup />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="strong-alcohol" element={<TypeOfCocktales />} />

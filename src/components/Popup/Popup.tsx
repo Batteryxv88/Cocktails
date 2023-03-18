@@ -11,11 +11,12 @@ const Popup = () => {
   );
 
   return (
-    <div className={isPopupOpen === true ?  styles.back_blur: styles.active}>
+    
       <div >
-        {isLoginFormOpen ? <LoginForm /> : <RegistrationForm />}
+        {isLoginFormOpen === null ?  '' :
+        isLoginFormOpen? <LoginForm />: <RegistrationForm />}
       </div>
-    </div>
+    
   );
 };
 

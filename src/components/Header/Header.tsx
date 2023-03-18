@@ -30,42 +30,42 @@ const Header = () => {
     <div className={styles.header}>
       <div className={styles.nav}>
         <Link className={styles.nav_title} to="/">
-          Домой
+          домой
         </Link>
         <Link
           className={styles.nav_title}
           to="/strong-alcohol"
           onClick={() => dispatch(setStrAlk)}
         >
-          Крепкие
+          крепкие
         </Link>
         <Link
           className={styles.nav_title}
           to="/low-alcohol"
           onClick={() => dispatch(setLowAlk)}
         >
-          Слабоалкогольные
+          слабоалкогольные
         </Link>
         <Link
           className={styles.nav_title}
           to="/non-alcoholic"
           onClick={() => dispatch(setNonAlk)}
         >
-          Безалкогольные
+          безалкогольные
         </Link>
       </div>
       <div className={styles.container}>
         <form className={styles.form}>
           <input className={styles.input}></input>
-          <button className={styles.button}>Поиск</button>
+          <button className={styles.button}>поиск</button>
         </form>
         <div className={styles.entry}>
           {!isPopupOpen && 
             <button className={styles.link} onClick={() => dispatch(popupToggle)}>
-              Войти
+              войти
             </button>
           }
-          {isPopupOpen && <button className={styles.button}>Выйти</button>}
+          {isPopupOpen && <button className={styles.button}>выйти</button>}
         </div>
       </div>
     </div>
