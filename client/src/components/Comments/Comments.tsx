@@ -1,6 +1,6 @@
 import styles from './comments.module.css';
 import Comment from './Comment/Comment';
-import { CommentType } from '../../state/cocktailsArr';
+import { CommentType } from '../../types/cocktails';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -17,7 +17,45 @@ const Comments = (props: CommentProps) => {
 
   const submitFormHandler = (evt: any) => {
     evt.preventDefault();
-    const newCoctail = {}
+    const newCoctail = {
+      name: '',
+      id: 'a24',
+      season: 'summer',
+      src: '',
+      src_sqv: '',
+      clas: 'low_alk',
+      description:
+        '',
+      ingredients: [
+        {
+          name: '',
+          vol: 1,
+          measure: '',
+        },
+        {
+          name: '',
+          vol: 1,
+          measure: '',
+        },
+        {
+          name: '',
+          vol: 1,
+          measure: '',
+        },
+        {
+          name: '',
+          vol: 1,
+          measure: '',
+        },
+        {
+          name: '',
+          vol: 1,
+          measure: '',
+        },
+        
+      ],
+      comment: []
+    }
 
     axios.post('http://localhost:3001/create', newCoctail);
   };

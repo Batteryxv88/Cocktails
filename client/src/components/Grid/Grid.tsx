@@ -1,44 +1,44 @@
-import styles from './grid.module.css'
-import GridItem from "./GridItem";
-import { useAppSelector } from "../../state/reduxHooks";
-import { useEffect, useState } from 'react';
-import { fetchCocktails } from '../../state/cocktales/toolkitSlice';
-import { useDispatch } from 'react-redux';
-import { strongAlk } from '../../state/cocktales/toolkitSlice';
-
+import styles from './grid.module.css';
+import GridItem from './GridItem';
+import { useAppSelector } from '../../state/reduxHooks';
 
 const Grid = () => {
-  const dispatch = useDispatch();
+  const filteredGrid = useAppSelector(
+    (state) => state.filteredGridSlice.filter
+  );
+  const cocktails = useAppSelector((state) => state.cocktailsSlice.data);
 
-  const coctails = useAppSelector((state) => state.toolkitSlice);
 
-  // const [cocktails, setCocktails] = useState<any[]>([
-  // ])
+  // фильтрация получаемого компонентом массива в зависимости от состояния фильтра
+  const filterHandler = () => {
+    const filter =
+      filteredGrid === 'All'
+        ? cocktails
+        : filteredGrid === 'Strong'
+        ? cocktails.filter((item) => item.clas === 'strong-alcohol')
+        : filteredGrid === 'Low'
+        ? cocktails.filter((item) => item.clas === 'low_alk')
+        : cocktails.filter((item) => item.clas === 'non_alk');
+    return filter;
+  };
 
-  // useEffect(() => {
-  //   fetch("/cocktails").then(res => {
-  //     if(res.ok) {
-  //       return res.json()
-  //     }
-  //   }).then(jsonRes => setCocktails(jsonRes))
-  // },[])
-
-  useEffect(() => {
-    dispatch(fetchCocktails());
-  }, []);
-
+  console.log(cocktails)
 
   return (
     <div className={styles.grid}>
-      {coctails.isLoading === true? <p>no item</p> : coctails.data.map((item, index) => (
-      <GridItem
-        img={item.src_sqv}
-        name={item.name}
-        key={`gridItem${index + 1}`}
-        _id={item.id}
-        class={item.class}
-      />
-    ))}
+      {filterHandler().length === 0 ? (
+        <p>no item</p>
+      ) : (
+        filterHandler().map((item: any, index: any) => (
+          <GridItem
+            img={item.src_sqv}
+            name={item.name}
+            key={`gridItem${index + 1}`}
+            _id={item.id}
+            class={item.class}
+          />
+        ))
+      )}
     </div>
   );
 };

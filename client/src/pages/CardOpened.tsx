@@ -4,7 +4,7 @@ import Card from '../components/Card/Card';
 import Comments from '../components/Comments/Comments';
 
 const CardOpened = () => {
-  const coctails = useAppSelector((state) => state.toolkitSlice.data);
+  const coctails = useAppSelector((state) => state.cocktailsSlice.data);
   const isCardOpen = useAppSelector((state) => state.isCardOpen);
 
   return (

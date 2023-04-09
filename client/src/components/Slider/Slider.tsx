@@ -5,7 +5,7 @@ import { useAppSelector } from '../../state/reduxHooks';
 
 
 const Slider = () => {
-  const cocktails = useAppSelector((state) => state.toolkitSlice.data);
+  const cocktails = useAppSelector((state) => state.cocktailsSlice.data);
   const [date, setDate] = useState<string>('');
 
   useEffect(() => {
@@ -17,7 +17,6 @@ const Slider = () => {
       .catch((err) => {
         console.log('Ошибка. Запрос не выполнен: ', err);
       });
-    
   }, []);
 
 

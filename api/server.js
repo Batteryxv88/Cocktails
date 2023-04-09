@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://mvkovalyov:t2t6JifAQpkMjwmu@cluster0.kdp6x7v.mongodb.net/cocktails?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://mongodb.net/cocktails?retryWrites=true&w=majority')
 
 app.use("/", require('./routes/cocktailRout'))
 

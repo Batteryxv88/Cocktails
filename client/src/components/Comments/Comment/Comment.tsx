@@ -1,6 +1,4 @@
 import styles from './comment.module.css';
-import { CommentsArr } from '../../../state/commentsArr';
-import { CommentType } from '../../../state/cocktailsArr';
 
 interface CommentProps {
   id: number;

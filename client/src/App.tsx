@@ -1,20 +1,24 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import styles from './app.module.css'
+import styles from './app.module.css';
 import Home from './pages/Home';
 import TypeOfCocktales from './pages/TypeOfCocktales';
 import CardOpened from './pages/CardOpened';
 import Popup from './components/Popup/Popup';
-import { useAppSelector } from './state/reduxHooks';
-
+import { useAppDispatch } from './state/reduxHooks';
+import { useEffect } from 'react';
+import { fetchCocktails } from './state/cocktales/cocktailsSlice';
 
 function App() {
-  const isPopupOpen = useAppSelector((store) => store.openPopup.isPopupOpen);
+  const dispatch = useAppDispatch();
 
-  
+  useEffect(() => {
+    dispatch(fetchCocktails());
+  }, []);
+
   return (
-    <BrowserRouter basename='/Cocktailes'>
+    <BrowserRouter basename="/Cocktailes">
       <div className={styles.app}>
-      <Popup />
+        <Popup />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="strong-alcohol" element={<TypeOfCocktales />} />

@@ -1,14 +1,13 @@
 import { combineReducers } from 'redux';
-//import { cocktails } from './cocktales/cocktailsReducer';
 import { isCardOpen } from './cardIsOpen/cardIsOpenReducer';
 import { openPopup } from './openPopup/openPopupReducer';
 import { comments } from './comments/commentsReducer';
-import toolkitSlice from './cocktales/toolkitSlice';
-import { applyMiddleware } from '@reduxjs/toolkit';
-import thunk from 'redux-thunk';
+import cocktailsSlice from './cocktales/cocktailsSlice';
+import filteredGridSlice from './filteredItem/filteredGridSlice';
 
 export const rootReducer = combineReducers({
-  toolkitSlice,
+  cocktailsSlice,
+  filteredGridSlice,
   openPopup,
   isCardOpen,
   comments,

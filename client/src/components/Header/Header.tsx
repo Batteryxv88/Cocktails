@@ -1,57 +1,41 @@
 import { Link } from 'react-router-dom';
 import styles from './header.module.css';
-import { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../state/reduxHooks';
 import { popupToggle } from '../../state/openPopup/openPopupActions';
 import '../../fonts/stylesheet.css';
-
-// import {
-//   setHome,
-//   setStrAlk,
-//   setLowAlk,
-//   setNonAlk,
-// } from '../../state/cocktales/cocktailsActions';
-
-import { setStrAlk, setLowAlk, setNonAlk, setHome } from '../../state/cocktales/toolkitSlice';
+import { setFilter} from '../../state/filteredItem/filteredGridSlice';
 
 const Header = () => {
-  const [dateUpdate, setDateUpdate] = useState(true);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const dispatch = useAppDispatch();
-
-  // const toggleDate = () => {
-  //   callBack(dateUpdate);
-  //   setDateUpdate(!dateUpdate);
-  //   dispatch(setHome)
-  // }
 
   const isPopupOpen = useAppSelector((store) => store.openPopup.isPopupOpen);
 
   return (
     <div className={styles.header}>
       <div className={styles.nav}>
-        <Link className={styles.nav_title} to="/">
+        <Link className={styles.nav_title} to="/" 
+        onClick={() => dispatch(setFilter('All'))}>
           домой
         </Link>
         <Link
           className={styles.nav_title}
           to="/strong-alcohol"
-          onClick={() => dispatch(setStrAlk())}
+          onClick={() => dispatch(setFilter('Strong'))}
         >
           крепкие
         </Link>
         <Link
           className={styles.nav_title}
           to="/low-alcohol"
-          onClick={() => dispatch(setLowAlk())}
+          onClick={() => dispatch(setFilter("Low"))}
         >
           слабоалкогольные
         </Link>
         <Link
           className={styles.nav_title}
           to="/non-alcoholic"
-          onClick={() => dispatch(setNonAlk())}
+          onClick={() => dispatch(setFilter("Non"))}
         >
           безалкогольные
         </Link>

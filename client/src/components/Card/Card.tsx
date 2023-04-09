@@ -2,7 +2,7 @@ import styles from './card.module.css';
 import Portions from './Portions/Portions';
 import Box from './Box/Box';
 import Like from './Like/Like';
-import { Ing } from '../../state/cocktailsArr';
+import { Ing } from '../../types/cocktails';
 import { useState } from 'react';
 
 interface CardProps {
