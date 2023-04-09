@@ -1,9 +1,9 @@
 import { RootActionsType } from './../rootActionsTypes';
 import { ALL_COM } from './commentsConst';
-import { commentsArr } from '../commentsArr';
-import { CommentsArr } from '../commentsArr';
+import { CommentType } from '../../types/cocktails';
 
-export const comments = (state: CommentsArr[] = commentsArr, action: RootActionsType) => {
+
+export const comments = (state = {}, action: RootActionsType) => {
   switch (action.type) {
     case ALL_COM: {
       return state;

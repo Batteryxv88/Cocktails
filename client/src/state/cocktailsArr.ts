@@ -1,29 +1,4 @@
-export type Ing = {
-  name: string;
-  vol: number | null;
-  measure: string;
-};
-
-export type CommentType = {
-  id: number;
-  author: string;
-  date: Date;
-  comment: string;
-  icon: string;
-};
-
-export type CocktalesArr = {
-  name: string;
-  id: string;
-  _id?: string;
-  season: string;
-  src: string;
-  src_sqv: string;
-  class: string;
-  description: string;
-  ingredients: Ing[];
-  comment: CommentType[]
-};
+import { CocktalesArr } from "../types/cocktails";
 
 const coctailsArr: CocktalesArr[] = [
   {
@@ -32,7 +7,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'winter',
     src: 'https://i.ibb.co/HxZT3Bg/negroni.jpg',
     src_sqv: 'https://i.ibb.co/k0yH0kb/negroni-sqv.jpg',
-    class: 'strong-alcohol',
+    clas: 'strong-alcohol',
     description:
       'Бокал для подачи наполнить кубиками льда. Влить биттер. Перемешать лед, добавить остальные ингредиенты и дольку апельсина, снова перемешать и украсить апельсиновой цедрой. «Негрони» нужно смешивать и выпивать немедленно, чтобы лед не начал таять и разбавлять вкус коктейля.',
     ingredients: [
@@ -86,7 +61,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'winter',
     src: 'https://i.ibb.co/8K5fyfN/sazerac.jpg',
     src_sqv: 'https://i.ibb.co/4J8cPN2/sazerac-sqv.jpg',
-    class: 'strong-alcohol',
+    clas: 'strong-alcohol',
     description:
       'Бокал рокс наполняем льдом, наливаем абсент и воду без газа. В стакан для смешивания кладем кубик сахара, пропитываем его битером и ангостурой, давим мадлером. В стакан для смешивания добавляем коньяк и бурбон, наполняем кубиками льда и размешиваем коктейльной ложкой. Добавлям содержимое рокса  и перемешиваем. Бокал для напитка ароматизируем и переливаем в него через стрейнер содержимое стакана для смешивания. Рокс украшаем цедрой лимона.',
     ingredients: [
@@ -145,7 +120,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'fall',
     src: 'https://i.ibb.co/30B2BMj/white-russian.jpg',
     src_sqv: 'https://i.ibb.co/5Rk4hsF/white-russian-sqv.jpg',
-    class: 'strong-alcohol',
+    clas: 'strong-alcohol',
     description:
       'Взять бокал и наполнить его льдом доверху. Налить кофейный ликер, налить водку. Налить жирные сливки, перемешать и подавать.',
     ingredients: [
@@ -174,7 +149,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'summer',
     src: 'https://i.ibb.co/hR2mNBy/aperol.jpg',
     src_sqv: 'https://i.ibb.co/vHHnrBX/aperol-spritz-sqv.jpg',
-    class: 'low_alk',
+    clas: 'low_alk',
     description:
       'Подготовить все ингредиенты. В бокал со льдом влить просекко, апероль и газированную воду. Перемешать барной ложкой. В бокал можно положить и дольку апельсина. Готово к подаче!',
     ingredients: [
@@ -208,7 +183,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'summer',
     src: 'https://i.ibb.co/9yS6P2J/Mojito.jpg',
     src_sqv: 'https://i.ibb.co/jgtrhK4/mohito-sqv.jpg',
-    class: 'low_alk',
+    clas: 'low_alk',
     description:
       'В высокий бокал положите нарезанный дольками лайм, веточки мяты и сахар. Толкушкой немного раздавите все, чтобы лайм и мята пустили сок. Смешайте оба рома и влейте в бокал. Затем добавьте немного Спрайта и немного шампанского.',
     ingredients: [
@@ -257,7 +232,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'summer',
     src: 'https://wallup.net/wp-content/uploads/2019/09/930248-liquor-alcohol-spirits-poster-drinks-drink-whiskey.jpg',
     src_sqv: 'https://i.ibb.co/Phnpsc4/whiskey-sqv.jpg',
-    class: 'strong-alcohol',
+    clas: 'strong-alcohol',
     description:
       'Наполните бокал кубиками льда, добавьте виски и колу. Смешайте все ингредиенты. Украсьте долькой лимона или веточкой мяты. Для коктейля лучше взять охлажденные и сухие хайболы или другие стаканы среднего объема. Используйте охлажденную и невыдохшуюся Coca-Cola. Углекислота придает смеси приятный вкус, теплая кола без газа подчеркивает резкий алкогольный запах, пить напиток неприятно.',
     ingredients: [
@@ -286,7 +261,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'summer',
     src: 'https://i.ibb.co/m9PxbB7/long-island.jpg',
     src_sqv: 'https://i.ibb.co/gJKSysH/Long-Island-sqv.jpg',
-    class: 'low_alk',
+    clas: 'low_alk',
     description:
       'В джиггере смешать водку, светлый ром, джин, текилу, куантро. Затем добавить свежевыжатый лимонный сок и 5-7 мл сахарного сиропа. Лед лучше использовать кубиком, фраппе слишком быстро тает и разбавляет коктейль, нам это совершенно не нужно. Добавить совсем немного колы, просто для цвета. Подавать как во времена сухого закона — в небольшом чайнике. Налить в чашку и положить небольшой кусочек лимона.',
     ingredients: [
@@ -340,7 +315,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'summer',
     src: 'https://i.ibb.co/F3cf0kP/Grasshopper.jpg',
     src_sqv: 'https://i.ibb.co/SRZJ80b/Grasshopper-sqv.jpg',
-    class: 'strong-alcohol',
+    clas: 'strong-alcohol',
     description:
       'Налить в шейкер нежирные сливки, мятный ликер зеленый и какао ликер светлый. Затем наполнить шейкер кубиками льда и взбить. Перелить через стрейнер в охлажденный коктейльный бокал и украсить литиками мяты',
     ingredients: [
@@ -379,7 +354,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'summer',
     src: 'https://i.ibb.co/f8szKBc/aviation.jpg',
     src_sqv: 'https://i.ibb.co/T4j3rmy/aviation-sqv.jpg',
-    class: 'strong-alcohol',
+    clas: 'strong-alcohol',
     description:
       'Налить в стакан для смешивания лимонный сок, ликер мараскино, фиалковый ликер и джин. Наполнить стакан кубиками льда и аккуратно размешать коктейльной ложкой. Перелить через стрейнер в охлажденный коктейльный бокал, украсить коктейльной вишней',
     ingredients: [
@@ -423,7 +398,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'summer',
     src: 'https://i.ibb.co/41NHy7Z/rose.jpg',
     src_sqv: 'https://i.ibb.co/KybkvYd/rose-sqv.jpg',
-    class: 'strong-alcohol',
+    clas: 'strong-alcohol',
     description:
       'Положить в один из стаканов шейкера лед, влить вермут, ­киршвассер и сироп. Перелить через стрейнер в другой стакан. Потом перелить обратно — и повторить процедуру несколько раз, постоянно увеличивая расстояние между стаканами, то есть поднимая их друг над другом все выше. Перелить в охлажденный коктейльный бокал. Украсить лимонной цедрой. Малиновый сироп могут заменить шесть ягод малины, размятые в шейкере с небольшим количеством сахара.',
     ingredients: [
@@ -457,7 +432,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'fall',
     src: 'https://i.ibb.co/FDghykh/grog.jpg',
     src_sqv: 'https://i.ibb.co/xM9Nc7F/grog-sqv.jpg',
-    class: 'strong-alcohol',
+    clas: 'strong-alcohol',
     description:
       'Довести воду до кипения, добавить чай, сахар и все специи. Влить ром. Довести всё до кипения, сразу же снять и накрыть крышкой. Дать настояться 10-15 мин и сразу же употребить',
     ingredients: [
@@ -526,7 +501,7 @@ const coctailsArr: CocktalesArr[] = [
     season: 'summer',
     src: 'https://i.ibb.co/WP4RZ5Q/bumblebee.jpg',
     src_sqv: 'https://i.ibb.co/VQ9MwWQ/bumblebee-sqv.jpg',
-    class: 'non_alk',
+    clas: 'non_alk',
     description:
       'Наполните хайбол льдом доверху, на лед налейте карамельный сироп, апельсиновый сок и кофе (чтобы слои не смешивались, это удобнее всего наливать «через» чайную ложку). Украсьте дольками апельсина. Если не хотите портить красоту, то ложкой лучше не размешивать — пейте через трубочку.',
     ingredients: [
