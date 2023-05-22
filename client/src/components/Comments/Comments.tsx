@@ -17,45 +17,7 @@ const Comments = (props: CommentProps) => {
 
   const submitFormHandler = (evt: any) => {
     evt.preventDefault();
-    const newCoctail = {
-      name: '',
-      id: 'a24',
-      season: 'summer',
-      src: '',
-      src_sqv: '',
-      clas: 'low_alk',
-      description:
-        '',
-      ingredients: [
-        {
-          name: '',
-          vol: 1,
-          measure: '',
-        },
-        {
-          name: '',
-          vol: 1,
-          measure: '',
-        },
-        {
-          name: '',
-          vol: 1,
-          measure: '',
-        },
-        {
-          name: '',
-          vol: 1,
-          measure: '',
-        },
-        {
-          name: '',
-          vol: 1,
-          measure: '',
-        },
-        
-      ],
-      comment: []
-    }
+    const newCoctail = {}
 
     axios.post('http://localhost:3001/create', newCoctail);
   };

@@ -22,20 +22,18 @@ const Grid = () => {
     return filter;
   };
 
-  console.log(cocktails)
-
   return (
     <div className={styles.grid}>
       {filterHandler().length === 0 ? (
         <p>no item</p>
       ) : (
-        filterHandler().map((item: any, index: any) => (
+        filterHandler().map((item, index) => (
           <GridItem
             img={item.src_sqv}
             name={item.name}
             key={`gridItem${index + 1}`}
             _id={item.id}
-            class={item.class}
+            class={item.clas}
           />
         ))
       )}

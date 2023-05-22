@@ -4,6 +4,8 @@ import Grid from '../components/Grid/Grid';
 import Slide from '../components/swiper/Slide';
 
 const Home = () => {
+  
+
   return (
     <>
       <Header />
