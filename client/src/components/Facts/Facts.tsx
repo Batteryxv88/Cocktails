@@ -84,7 +84,30 @@ function linearSearch(arr: any, target: any) {
  return -1
 }
 
-console.log(linearSearch([1, 2, 3, 4, 5], 5));
+//console.log(linearSearch([1, 2, 3, 4, 5], 5));
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
+
+const data = 
+[
+  {name: "Саша", age: 19},
+  {name: "Катя", age: 21},
+  {name: "Миша", age: 17},
+  {name: "Федя", age: 23},
+  {name: "Клава", age: 22}
+]
+
+
+function calcAvgAge(array: any) {
+  const avg = array.reduce((accum: any, curr: any) => {
+   console.log(accum + curr.age)
+  })
+  return avg
+}
+
+//console.log(calcAvgAge(data))
 
 
   return (

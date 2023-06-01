@@ -19,3 +19,11 @@
   width: 20px;
   height: 20px;
 }
+
+
+@media screen and (max-width: 1280px) {
+  .img {
+    width: 16px;
+    height: 16px;
+  }
+}
