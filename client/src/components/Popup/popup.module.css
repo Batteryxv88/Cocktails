@@ -1,5 +1,7 @@
 .popup {
   visibility: visible;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .active {

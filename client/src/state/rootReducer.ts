@@ -4,6 +4,7 @@ import { openPopup } from './openPopup/openPopupReducer';
 import { comments } from './comments/commentsReducer';
 import cocktailsSlice from './cocktales/cocktailsSlice';
 import filteredGridSlice from './filteredItem/filteredGridSlice';
+import recipeConstructorSlice from './recipeConstructor/recipeConstructorSlice';
 
 export const rootReducer = combineReducers({
   cocktailsSlice,
@@ -11,6 +12,7 @@ export const rootReducer = combineReducers({
   openPopup,
   isCardOpen,
   comments,
+  recipeConstructorSlice
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

@@ -34,7 +34,7 @@ const LoginForm = () => {
   const isPopupOpen = useAppSelector((store) => store.openPopup.isPopupOpen);
 
   return (
-    <div className={isPopupOpen === true ?  styles.blur: styles.active}>
+    <div className={isPopupOpen ?  styles.active: ''}>
       <div className={styles.blur}>
         <div className={styles.form}>
           <div className={styles.title_wrapper}>

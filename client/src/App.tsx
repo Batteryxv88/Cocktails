@@ -7,6 +7,7 @@ import Popup from './components/Popup/Popup';
 import { useAppDispatch } from './state/reduxHooks';
 import { useEffect } from 'react';
 import { fetchCocktails } from './state/cocktales/cocktailsSlice';
+import GlobalStyle from './globalStyles';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -18,14 +19,16 @@ function App() {
   return (
     <BrowserRouter basename="/Cocktailes">
       <div className={styles.app}>
-        <Popup />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="strong-alcohol" element={<TypeOfCocktales />} />
-          <Route path="low-alcohol" element={<TypeOfCocktales />} />
-          <Route path="non-alcoholic" element={<TypeOfCocktales />} />
-          <Route path=":category/:id" element={<CardOpened />} />
-        </Routes>
+        <div className={styles.container}>
+          <Popup />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="strong-alcohol" element={<TypeOfCocktales />} />
+            <Route path="low-alcohol" element={<TypeOfCocktales />} />
+            <Route path="non-alcoholic" element={<TypeOfCocktales />} />
+            <Route path=":category/:id" element={<CardOpened />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );

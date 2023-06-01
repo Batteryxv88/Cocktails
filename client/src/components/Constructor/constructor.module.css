@@ -1,0 +1,79 @@
+.constr {
+  width: 75.5%;
+  margin: 0 auto 120px auto;
+  border-top: 2px solid gray;
+  padding: 30px 0 90px;
+  border-bottom: 2px solid gray;
+}
+
+.note {
+  color: rgb(205, 205, 205);
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.input {
+  border: none;
+  border: 1px solid rgb(205, 205, 205);
+  background-color: transparent;
+  width: 250px;
+  height: 28px;
+  color: rgb(205, 205, 205);
+  margin-right: 60px;
+  font-size: 17px;
+  padding-left: 20px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.button {
+  width: 150px;
+  height: 32px;
+  background-color: transparent;
+  color: rgb(205, 205, 205);
+  border: 1px solid rgb(205, 205, 205);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.wrapper0 {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper1 {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0 0;
+  height: 70px;
+}
+
+.wrapper2 {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.inputwrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.clue {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 320px;
+  min-height: 0px;
+  position: absolute;
+  left: 1%;
+  top: 37px;
+  z-index: 3;
+}

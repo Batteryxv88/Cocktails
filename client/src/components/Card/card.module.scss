@@ -26,8 +26,8 @@
   }
   
 .img {
-    max-width: 500px;
-    max-height: 500px;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
     object-fit: contain;
   }
@@ -35,9 +35,11 @@
 .wrapper1 {
     display: flex;
     flex-direction: column;
+    //min-width: 540px;
     width: 50%;
     max-height: 600px;
     border-top: 2px solid gray;
+    margin-right: 70px;
   }
   
 .panel0 {
@@ -71,18 +73,20 @@
     text-align: end;
     margin: 60px auto 0 auto;
     border-bottom: 2px solid gray;
-    
+    font-size: 22px;
   }
   
 .ing {
     color: rgb(145, 145, 145);
     margin: 5px 0 0 10px;
     text-align: start;
+    font-size: 20px;
   }
   
 .wrapper2 {
+    min-width: 300px;
     font-size: 20px;
-    margin: 50px 0 0 0;
+    margin: 50px 50px 0 0;
   }
   
   
@@ -91,11 +95,13 @@
     color: rgb(145, 145, 145);
     text-align: start;
     margin: 0;
+    font-size: 22px;
   }
   
   .wrapper3 {
     display: flex;
     flex-direction: row;
+    
   }
   
   .panel1 {
@@ -106,9 +112,70 @@
   }
   
   .control {
+    min-width: 150px;
     display: flex;
     flex-direction: column;
     margin: 55px 0 0 0;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .ing {
+      font-size: 18px;
+    }
+
+    .ing2 {
+      font-size: 20px;
+    }
+
+    .control {
+      font-size: 12px;
+      min-width: 123px;
+    }
+
+    .description {
+      font-size: 20px;
+      height: 120px;
+    }
+
+    .title {
+      font-size: 32px;
+    }
+
+    .wrapper2 {
+      min-width: 260px;
+      font-size: 20px;
+      margin: 50px 50px 0 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .ing {
+      font-size: 16px;
+    }
+
+    .ing2 {
+      font-size: 18px;
+    }
+
+    .control {
+      font-size: 12px;
+    }
+
+    .description {
+      font-size: 18px;
+      height: 100px;
+    }
+
+    .title {
+      font-size: 28px;
+    }
+
+    .wrapper2 {
+      min-width: 270px;
+      font-size: 18px;
+      margin: 50px 50px 0 0;
+    }
   }
   
   

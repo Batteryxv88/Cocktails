@@ -5,4 +5,23 @@
   backdrop-filter: blur(80px);
   margin: 0 auto;
   min-height: 100vh;
+  padding: 0 40px 0 40px;
+  overflow: visible;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    padding: 0 18px 0 18px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .app {
+    padding: 0 12px 0 12px;
+  }
 }
